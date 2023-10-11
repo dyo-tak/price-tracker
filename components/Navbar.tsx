@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Lilita_One } from 'next/font/google'
+
+const lilitaOne = Lilita_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 
 const navIcons = [
   { src: '/assets/icons/search.svg', alt: 'search' },
@@ -19,9 +26,11 @@ const Navbar = () => {
             alt="logo"
           />
 
-          <p className="nav-logo font-lilitaOne">
-            Price<span className='text-blue-600'>Tracker </span>
-          </p>
+          <div className={lilitaOne.className}>
+            <p className="nav-logo {style}">
+              Price<span className='text-blue-600'>Tracker </span>
+            </p>
+          </div>
         </Link>
 
         <div className="flex items-center gap-5">
