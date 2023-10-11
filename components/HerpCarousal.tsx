@@ -35,6 +35,14 @@ const HeroCarousel = () => {
         ))}
       </Carousel>
 
+      <style jsx>{`
+        @screen sm {
+          .hero-carousel {
+            height: 200px; /* Adjust this value as needed for your design */
+          }
+        }
+      `}</style>
+
       <Image 
         src="assets/icons/hand-drawn-arrow.svg"
         alt="arrow"

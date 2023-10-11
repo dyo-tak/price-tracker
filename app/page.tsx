@@ -22,15 +22,13 @@ const page = async () => {
                 height={16}
               />
             </p>
-            <h1 className="head-text">
+            <h1 className="head-text ">
               Unleash the Power of
               <span className="text-blue-700"> PriceTracker</span>
             </h1>
             <p className="mt-6">
-              Powerful, self-serve product and growth analytics to help you
-              convert, engage, and retain more.
+              Paste your amazon product link below and we will provide you with the history of the product and notify you.
             </p>
-            Searchbar
             <Searchbar />
           </div>
 
