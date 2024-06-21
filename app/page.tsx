@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Searchbar from "@/components/Searchbar";
 import HerpCarousal from "@/components/HerpCarousal";
@@ -7,7 +6,7 @@ import ProductCard from "@/components/ProductCard";
 
 const page = async () => {
   const allProducts = await getAllProducts();
-  
+
   return (
     <>
       <section className="px-6 md:px-20 py-24">
@@ -27,7 +26,8 @@ const page = async () => {
               <span className="text-blue-700"> PriceTracker</span>
             </h1>
             <p className="mt-6">
-              Paste your amazon product link below and we will provide you with the history of the product and notify you.
+              Paste your amazon product link below and we will provide you with
+              the history of the product and notify you.
             </p>
             <Searchbar />
           </div>
@@ -39,10 +39,13 @@ const page = async () => {
       <section className="trending-section">
         <h2 className="section-text">Trending</h2>
 
-        <div className="flex justify-between flex-wrap gap-x-8 gap-y-16">
-          {allProducts?.map((product) => (
-            <ProductCard key={product._id} product={product} />
-          ))}
+        <div className="grid grid-cols-2 sm:grid md:grid-cols-4 gap-x-8 gap-y-16">
+          {allProducts
+            ?.slice()
+            .reverse()
+            .map((product) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
         </div>
       </section>
     </>
